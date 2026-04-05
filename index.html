@@ -21,31 +21,33 @@
             z-index: 100;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
-      nav ul {
-    width: 98%;                  /* gives almost full width so everything fits */
+   nav ul {
+    width: 100%;                 /* full width inside the nav-bar */
     margin: 0 auto;
     display: flex;
-    flex-wrap: nowrap;           /* forces one line */
+    flex-wrap: nowrap;           /* forces one single line */
     list-style: none;
-    padding: 0;
+    padding: 0 12px;             /* ← this fixes the “outside blue” problem */
     background-color: #330066;
-    justify-content: center;
+    justify-content: space-between;   /* even spacing so nothing cramps */
+    box-sizing: border-box;
 }
 
 nav li {
     flex: 1;
     text-align: center;
-    min-width: 115px;            /* slightly tighter than your original 130px — just enough to fit everything */
+    min-width: 112px;            /* tuned so all 9 full labels fit */
     white-space: nowrap;
 }
 
 nav a {
     display: block;
-    padding: 6px 4px;            /* exactly your original padding */
+    padding: 8px 6px;            /* comfortable padding */
     color: #ffff00;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.94em;           /* tiny reduction so the longest label fits without overlapping or cramping */
+    font-size: 0.93em;           /* tiny, almost invisible reduction — keeps full text readable */
+    line-height: 1.15;
 }
         nav a:hover {
             background-color: LightYellow;
