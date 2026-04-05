@@ -20,26 +20,28 @@
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    width: 100%;               /* full page width */
-    max-width: none;
+    width: 100%;               /* makes the blue bar full screen width */
+    max-width: none;           /* removes any limit */
+    margin: 0;                 /* no centering restriction */
 }
+
 nav ul {
     width: 100%;
-    max-width: 1250px;         /* ← wide enough for all 9 full labels */
-    margin: 0 auto;
+    max-width: 1350px;         /* wide enough for all 9 full original labels */
+    margin: 0 auto;            /* centers the buttons nicely inside the wide bar */
     display: flex;
-    flex-wrap: nowrap;         /* ← forces one single line */
+    flex-wrap: nowrap;         /* forces everything onto ONE single line */
     list-style: none;
-    padding: 0 20px;
+    padding: 0 30px;           /* breathing room on left and right so nothing sticks out */
     background-color: #330066;
-    justify-content: space-around;   /* even spacing, no cramping */
+    justify-content: space-around;   /* even spacing — no cramping between items */
     box-sizing: border-box;
 }
 
 nav li {
     flex: 1;
     text-align: center;
-    min-width: 130px;          /* your original size */
+    min-width: 125px;          /* balanced for your full labels */
     white-space: nowrap;
 }
 
