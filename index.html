@@ -20,27 +20,28 @@
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    width: 100%;               /* stretches full screen width */
-    max-width: none;           /* removes any previous limit */
+    width: 100%;               /* full screen width */
+    max-width: none;           /* remove any limit */
+    margin: 0;                 /* no centering restriction */
 }
 
 nav ul {
     width: 100%;
-    max-width: 1400px;         /* plenty of room for all 9 full labels */
+    max-width: 1450px;         /* extra wide — should fit all 9 full labels comfortably */
     margin: 0 auto;
     display: flex;
-    flex-wrap: nowrap;         /* forces ONE single line */
+    flex-wrap: nowrap;         /* force one single line */
     list-style: none;
-    padding: 0 40px;           /* side padding so nothing sticks out of blue */
+    padding: 0 40px;           /* padding so edges stay inside blue */
     background-color: #330066;
-    justify-content: space-around;   /* even spacing, prevents cramping */
+    justify-content: space-around;   /* even spacing, reduces cramping */
     box-sizing: border-box;
 }
 
 nav li {
     flex: 1;
     text-align: center;
-    min-width: 120px;
+    min-width: 118px;
     white-space: nowrap;
 }
 
