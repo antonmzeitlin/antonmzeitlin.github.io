@@ -13,7 +13,6 @@
             background-color: #a3a3c2;
             line-height: 1.6;
         }
-        /* Exact top navigation preserved */
         .nav-bar {
             background-color: #a3a3c2;
             padding: 8px 0;
@@ -76,7 +75,8 @@
             margin-top: 40px;
             text-align: center;
             font-size: small;
-            padding: 10px;
+            padding: 15px;
+            border-top: 1px solid #ccc;
         }
     </style>
 </head>
@@ -84,7 +84,7 @@
 
     <a href="#maincontent" class="skip-link">Skip to main content</a>
 
-    <!-- Top navigation - preserved exactly -->
+    <!-- Top navigation preserved exactly -->
     <div class="nav-bar">
         <table class="nav-table" cellpadding="0" cellspacing="0" width="80%">
             <tr>
@@ -127,21 +127,22 @@
             <p><strong>My research interests are in representation theory with applications in geometry, topology and mathematical physics.</strong></p>
         </div>
 
-        <!-- Placeholders for other sections -->
+        <!-- Other sections placeholders -->
         <div id="research" class="section" style="display:none;"><h1>Research</h1><p>Content coming soon...</p></div>
         <div id="cv" class="section" style="display:none;"><h1>Curriculum Vitae</h1><p>Content coming soon...</p></div>
 
-        <!-- StatCounter - now clearly visible -->
-        <div class="statcounter-area">
-            <noscript>
-                <a href="https://statcounter.com/free-hit-counter/" title="Web Analytics" target="_blank">
-                    <img src="https://c.statcounter.com/8363175/0/99b7ce7e/0/" 
-                         alt="Website visitor counter" 
-                         style="border:0;">
-                </a>
-            </noscript>
-        </div>
+    </div>
 
+    <!-- StatCounter - moved to bottom of page, always visible fallback -->
+    <div class="statcounter-area">
+        <noscript>
+            <a href="https://statcounter.com/free-hit-counter/" title="Web Analytics" target="_blank">
+                <img src="https://c.statcounter.com/8363175/0/99b7ce7e/0/" 
+                     alt="Website visitor counter" 
+                     style="border:0;">
+            </a>
+        </noscript>
+        <p style="font-size:10px; color:#555; margin-top:5px;">Visitor counter</p>
     </div>
 
     <script>
@@ -150,8 +151,6 @@
             const active = document.getElementById(sectionId);
             if (active) active.style.display = 'block';
         }
-        // Show About me by default
         showSection('about');
     </script>
 </body>
-</html>
