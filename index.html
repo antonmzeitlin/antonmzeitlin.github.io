@@ -22,14 +22,16 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         nav ul {
-            width: 80%;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-            padding: 0;
-            background-color: #330066;
-        }
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;           /* ← this forces everything onto ONE line */
+    overflow-x: auto;            /* ← if the screen is narrow, it scrolls horizontally instead of wrapping */
+    list-style: none;
+    padding: 0;
+    background-color: #330066;
+    scrollbar-width: thin;       /* nice thin scroll bar on desktop */
+}
         nav li {
             flex: 1;
             text-align: center;
