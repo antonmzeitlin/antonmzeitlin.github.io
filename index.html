@@ -13,41 +13,41 @@
             background-color: #a3a3c2;
             line-height: 1.6;
         }
-        .nav-bar {
-            background-color: #a3a3c2;
-            padding: 8px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-   nav ul {
-    width: 100%;
-    margin: 0 auto;
+   .nav-bar {
+    background-color: #330066;
+    padding: 8px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    max-width: 980px;          /* ← matches the main content panel */
+    margin: 0 auto;            /* ← centers the blue bar perfectly */
+}
+
+nav ul {
+    width: 100%;               /* fills the centered blue bar */
+    margin: 0;
     display: flex;
-    flex-wrap: nowrap;           /* forces one single line */
+    flex-wrap: wrap;           /* your original setting that already worked */
     list-style: none;
-    padding: 0 20px;             /* side padding stops Miscellanea from sticking out */
-    background-color: transparent;
-    justify-content: space-around;   /* even spacing — fixes cramping between Teaching & Conferences organized */
-    box-sizing: border-box;
+    padding: 0 10px;           /* small side padding so nothing sticks out */
+    background-color: #330066;
+    justify-content: center;
 }
 
 nav li {
     flex: 1;
     text-align: center;
-    min-width: 115px;            /* tuned for your 9 full labels */
+    min-width: 130px;          /* your original value */
     white-space: nowrap;
 }
 
 nav a {
     display: block;
-    padding: 8px 6px;
+    padding: 6px 4px;          /* your original padding */
     color: #ffff00;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.93em;           /* tiny, barely noticeable reduction — keeps every word fully readable */
-    line-height: 1.15;
 }
         nav a:hover {
             background-color: LightYellow;
