@@ -85,20 +85,21 @@
 <body>
 
     <a href="#maincontent" class="skip-link">Skip to main content</a>
+    <main id="maincontent" class="main-content">
 
     <!-- Navigation - exact same look as your original -->
     <div class="nav-bar">
         <nav aria-label="Main navigation">
             <ul>
-                <li><a href="#" onclick="showSection('about'); return false;">About me</a></li>
-                <li><a href="#" onclick="showSection('research'); return false;">Research</a></li>
-                <li><a href="#" onclick="showSection('cv'); return false;">CV</a></li>
-                <li><a href="#" onclick="showSection('publications'); return false;">Publications</a></li>
-                <li><a href="#" onclick="showSection('talks'); return false;">Talks</a></li>
-                <li><a href="#" onclick="showSection('seminars'); return false;">MP Seminar</a></li>
-                <li><a href="#" onclick="showSection('conf'); return false;">Conferences organized</a></li>
-                <li><a href="#" onclick="showSection('teaching'); return false;">Teaching</a></li>
-                <li><a href="#" onclick="showSection('miscellanea'); return false;">Miscellanea</a></li>
+                <li role="presentation"><a href="#" role="tab" id="tab-about" aria-controls="about" aria-selected="true" onclick="showSection('about'); return false;">About me</a></li>
+<li role="presentation"><a href="#" role="tab" id="tab-research" aria-controls="research" aria-selected="true" onclick="showSection('research'); return false;">Research</a></li>
+    <li role="presentation"><a href="#" role="tab" id="tab-cv" aria-controls="cv" aria-selected="true" onclick="showSection('cv'); return false;">CV</a></li>
+                <li role="presentation"><a href="#" role="tab" id="tab-publications" aria-controls="publications" aria-selected="true" onclick="showSection('publications'); return false;">Publications</a></li>
+                <li role="presentation"><a href="#" role="tab" id="tab-talks" aria-controls="talks" aria-selected="true" onclick="showSection('talks'); return false;">Talks</a></li>
+                <li role="presentation"><a href="#" role="tab" id="tab-seminars" aria-controls="seminars" aria-selected="true" onclick="showSection('seminars'); return false;">MP Seminar</a></li>
+                <li role="presentation"><a href="#" role="tab" id="tab-conf" aria-controls="conf" aria-selected="true" onclick="showSection('conf'); return false;">Conferences Orginized</a></li>
+                <li role="presentation"><a href="#" role="tab" id="tab-teaching" aria-controls="teaching" aria-selected="true" onclick="showSection('teaching'); return false;">Teaching</a></li>
+                <li role="presentation"><a href="#" role="tab" id="tab-miscellanea" aria-controls="miscellanea" aria-selected="true" onclick="showSection('miscellanea'); return false;">Miscellanea</a></li>
             </ul>
         </nav>
     </div>
