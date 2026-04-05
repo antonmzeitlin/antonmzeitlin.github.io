@@ -22,31 +22,31 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
    nav ul {
-    width: 100%;                 /* full width inside the nav-bar */
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: nowrap;           /* forces one single line */
     list-style: none;
-    padding: 0 12px;             /* ← this fixes the “outside blue” problem */
-    background-color: #330066;
-    justify-content: space-between;   /* even spacing so nothing cramps */
+    padding: 0 20px;             /* side padding stops Miscellanea from sticking out */
+    background-color: transparent;
+    justify-content: space-around;   /* even spacing — fixes cramping between Teaching & Conferences organized */
     box-sizing: border-box;
 }
 
 nav li {
     flex: 1;
     text-align: center;
-    min-width: 112px;            /* tuned so all 9 full labels fit */
+    min-width: 115px;            /* tuned for your 9 full labels */
     white-space: nowrap;
 }
 
 nav a {
     display: block;
-    padding: 8px 6px;            /* comfortable padding */
+    padding: 8px 6px;
     color: #ffff00;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.93em;           /* tiny, almost invisible reduction — keeps full text readable */
+    font-size: 0.93em;           /* tiny, barely noticeable reduction — keeps every word fully readable */
     line-height: 1.15;
 }
         nav a:hover {
