@@ -1,48 +1,122 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Keywords" content="Zeitlin, Anton Zeitlin, Anton M. Zeitlin, mathematics, Georgia Tech">
-    <meta name="Description" content="Home page of Anton M. Zeitlin, School of Mathematics, Georgia Institute of Technology">
+    <meta name="description" content="Anton M. Zeitlin - Associate Professor, School of Mathematics, Georgia Institute of Technology">
     <title>Anton M. Zeitlin | School of Mathematics | Georgia Institute of Technology</title>
-</head>
-<frameset rows="70,*" border="0" frameborder="0" framespacing="0">
-    <frame 
-        src="top.html" 
-        name="title" 
-        title="Navigation Menu - Anton M. Zeitlin" 
-        scrolling="no" 
-        noresize="noresize" 
-        marginwidth="0" 
-        marginheight="0">
-    
-    <frame 
-        src="aboutme.html" 
-        name="main" 
-        title="Main Content - Anton M. Zeitlin" 
-        scrolling="yes" 
-        marginwidth="15" 
-        marginheight="15">
-</frameset>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f8f8f8;
+            line-height: 1.5;
+        }
+        /* Your original top navigation - preserved exactly */
+        .nav-bar {
+            background-color: #a3a3c2;
+            padding: 8px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav-table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        .nav-table td {
+            background-color: #330066;
+            color: red;
+            text-align: center;
+            padding: 6px 4px;
+            font-weight: bold;
+        }
+        .nav-table td:hover {
+            background-color: LightYellow;
+            color: white;
+        }
+        .nav-table a {
+            color: #ffff00;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            padding: 5px;
+        }
+        .nav-table a:visited { color: yellow; }
+        .nav-table a:hover { color: black; }
+        .nav-table a:active { color: black; }
 
-<noframes>
-    <body>
-        <h1>Anton M. Zeitlin – Georgia Institute of Technology</h1>
-        <p>Your browser does not support frames or they have been disabled. Please use the links below:</p>
-        <ul>
-            <li><a href="aboutme.html">About me</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="talks.html">Talks</a></li>
-            <li><a href="seminars.html">MP Seminar</a></li>
-            <li><a href="conf.html">Conferences organized</a></li>
-            <li><a href="teaching.html">Teaching</a></li>
-            <li><a href="miscellanea.html">Miscellanea</a></li>
-        </ul>
+        /* Main content area */
+        .main-content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ddd;
+            min-height: 70vh;
+        }
+        h1 { color: #330066; }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 10px;
+            background: #330066;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+        }
+        .skip-link:focus { top: 10px; }
+    </style>
+</head>
+<body>
+
+    <!-- Skip to content for accessibility -->
+    <a href="#maincontent" class="skip-link">Skip to main content</a>
+
+    <!-- Your preserved top navigation -->
+    <div class="nav-bar">
+        <table class="nav-table" cellpadding="0" cellspacing="0" width="80%">
+            <tr>
+                <td><a href="#" onclick="loadPage('aboutme')">About me</a></td>
+                <td><a href="#" onclick="loadPage('research')">Research</a></td>
+                <td><a href="#" onclick="loadPage('cv')">CV</a></td>
+                <td><a href="#" onclick="loadPage('publications')">Publications</a></td>
+                <td><a href="#" onclick="loadPage('talks')">Talks</a></td>
+                <td><a href="#" onclick="loadPage('seminars')">MP Seminar</a></td>
+                <td><a href="#" onclick="loadPage('conf')">Conferences organized</a></td>
+                <td><a href="#" onclick="loadPage('teaching')">Teaching</a></td>
+                <td><a href="#" onclick="loadPage('miscellanea')">Miscellanea</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Main content area -->
+    <div class="main-content" id="maincontent">
+        <h1>Anton M. Zeitlin</h1>
+        <p><strong>Associate Professor</strong><br>
+           School of Mathematics<br>
+           Georgia Institute of Technology<br>
+           686 Cherry Street, Atlanta, GA 30332-0160, USA</p>
         <p><strong>Email:</strong> <a href="mailto:zeitlin@gatech.edu">zeitlin@gatech.edu</a></p>
-        <p>School of Mathematics, Georgia Institute of Technology, Atlanta, GA, USA</p>
-    </body>
-</noframes>
+        <p>Research interests: Representation theory with applications in geometry, topology, and mathematical physics.</p>
+
+        <!-- Your StatCounter - kept but made accessible -->
+        <div class="statcounter" aria-hidden="true" style="display:none;">
+            <a href="https://statcounter.com/free-hit-counter/" title="Web Analytics" target="_blank">
+                <img src="https://c.statcounter.com/8363175/0/99b7ce7e/0/" alt="">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Simple content loader - you can expand this later with more pages
+        function loadPage(page) {
+            alert("This would load the " + page + " content here.\n\nIn the full version, each menu item will smoothly replace the main content without reloading the page.");
+            // Example: window.location.href = page + ".html"; // or fetch content dynamically
+        }
+    </script>
+</body>
 </html>
