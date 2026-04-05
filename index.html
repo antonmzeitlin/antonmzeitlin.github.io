@@ -22,27 +22,30 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
       nav ul {
-    width: 80%;                  /* ← exactly your original width */
+    width: 98%;                  /* gives almost full width so everything fits */
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;             /* ← your original setting (allows graceful wrap only on tiny phones) */
+    flex-wrap: nowrap;           /* forces one line */
     list-style: none;
     padding: 0;
     background-color: #330066;
+    justify-content: center;
 }
 
 nav li {
     flex: 1;
     text-align: center;
-    min-width: 130px;            /* ← exactly your original value that already fitted */
+    min-width: 115px;            /* slightly tighter than your original 130px — just enough to fit everything */
+    white-space: nowrap;
 }
 
 nav a {
     display: block;
-    padding: 6px 4px;            /* ← exactly your original padding */
+    padding: 6px 4px;            /* exactly your original padding */
     color: #ffff00;
     text-decoration: none;
     font-weight: bold;
+    font-size: 0.94em;           /* tiny reduction so the longest label fits without overlapping or cramping */
 }
         nav a:hover {
             background-color: LightYellow;
