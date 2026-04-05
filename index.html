@@ -10,17 +10,17 @@
             margin: 0;
             padding: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f8f8f8;
-            line-height: 1.5;
+            background-color: #f4f4f4;
+            line-height: 1.6;
         }
-        /* Your original top navigation - preserved exactly */
+        /* === Your original top navigation - preserved exactly === */
         .nav-bar {
             background-color: #a3a3c2;
             padding: 8px 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         .nav-table {
             width: 80%;
@@ -44,79 +44,121 @@
             font-weight: bold;
             display: block;
             padding: 5px;
+            width: 100%;
+            height: 100%;
         }
         .nav-table a:visited { color: yellow; }
         .nav-table a:hover { color: black; }
         .nav-table a:active { color: black; }
 
-        /* Main content area */
+        /* Main content */
         .main-content {
             max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
+            margin: 25px auto;
+            padding: 25px;
             background: white;
-            border: 1px solid #ddd;
-            min-height: 70vh;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        h1 { color: #330066; }
         .skip-link {
             position: absolute;
             top: -40px;
             left: 10px;
             background: #330066;
             color: white;
-            padding: 8px;
+            padding: 8px 12px;
             text-decoration: none;
+            z-index: 200;
         }
         .skip-link:focus { top: 10px; }
+        h1, h2 { color: #330066; }
+        img.photo { border: 3px solid #330066; }
     </style>
 </head>
 <body>
 
-    <!-- Skip to content for accessibility -->
+    <!-- Accessibility skip link -->
     <a href="#maincontent" class="skip-link">Skip to main content</a>
 
-    <!-- Your preserved top navigation -->
+    <!-- Your preserved top navigation panel -->
     <div class="nav-bar">
         <table class="nav-table" cellpadding="0" cellspacing="0" width="80%">
             <tr>
-                <td><a href="#" onclick="loadPage('aboutme')">About me</a></td>
-                <td><a href="#" onclick="loadPage('research')">Research</a></td>
-                <td><a href="#" onclick="loadPage('cv')">CV</a></td>
-                <td><a href="#" onclick="loadPage('publications')">Publications</a></td>
-                <td><a href="#" onclick="loadPage('talks')">Talks</a></td>
-                <td><a href="#" onclick="loadPage('seminars')">MP Seminar</a></td>
-                <td><a href="#" onclick="loadPage('conf')">Conferences organized</a></td>
-                <td><a href="#" onclick="loadPage('teaching')">Teaching</a></td>
-                <td><a href="#" onclick="loadPage('miscellanea')">Miscellanea</a></td>
+                <td><a href="#" onclick="showSection('about')">About me</a></td>
+                <td><a href="#" onclick="showSection('research')">Research</a></td>
+                <td><a href="#" onclick="showSection('cv')">CV</a></td>
+                <td><a href="#" onclick="showSection('publications')">Publications</a></td>
+                <td><a href="#" onclick="showSection('talks')">Talks</a></td>
+                <td><a href="#" onclick="showSection('seminars')">MP Seminar</a></td>
+                <td><a href="#" onclick="showSection('conf')">Conferences organized</a></td>
+                <td><a href="#" onclick="showSection('teaching')">Teaching</a></td>
+                <td><a href="#" onclick="showSection('miscellanea')">Miscellanea</a></td>
             </tr>
         </table>
     </div>
 
     <!-- Main content area -->
     <div class="main-content" id="maincontent">
-        <h1>Anton M. Zeitlin</h1>
-        <p><strong>Associate Professor</strong><br>
-           School of Mathematics<br>
-           Georgia Institute of Technology<br>
-           686 Cherry Street, Atlanta, GA 30332-0160, USA</p>
-        <p><strong>Email:</strong> <a href="mailto:zeitlin@gatech.edu">zeitlin@gatech.edu</a></p>
-        <p>Research interests: Representation theory with applications in geometry, topology, and mathematical physics.</p>
 
-        <!-- Your StatCounter - kept but made accessible -->
-        <div class="statcounter" aria-hidden="true" style="display:none;">
-            <a href="https://statcounter.com/free-hit-counter/" title="Web Analytics" target="_blank">
-                <img src="https://c.statcounter.com/8363175/0/99b7ce7e/0/" alt="">
-            </a>
+        <!-- About Me Section (your cleaned content) -->
+        <div id="about" class="section">
+            <h1>Anton M. Zeitlin</h1>
+            <table width="100%" cellpadding="15" cellspacing="10">
+                <tr>
+                    <td>
+                        <p><strong>Associate Professor</strong><br>
+                        School of Mathematics<br>
+                        Georgia Institute of Technology<br>
+                        686 Cherry Street<br>
+                        Atlanta, GA 30332-0160, USA</p>
+                        <p><strong>Email:</strong> <a href="mailto:azeitlin6@gatech.edu">azeitlin6@gatech.edu</a></p>
+                    </td>
+                    <td align="right">
+                        <img src="PHOTO/avatar.jpg" width="255" height="255" alt="Photo of Anton M. Zeitlin" class="photo">
+                    </td>
+                </tr>
+            </table>
+
+            <p><strong>I am an Associate Professor at the Georgia Institute of Technology.</strong></p>
+            <p><strong>My research interests are in representation theory with applications in geometry, topology and mathematical physics.</strong></p>
         </div>
+
+        <!-- Placeholder for other sections (we'll fill them next) -->
+        <div id="research" class="section" style="display:none;">
+            <h1>Research</h1>
+            <p>Content for Research will go here.</p>
+        </div>
+        <div id="cv" class="section" style="display:none;">
+            <h1>Curriculum Vitae</h1>
+            <p>Content for CV will go here.</p>
+        </div>
+        <!-- Add more sections as needed -->
+
+        <!-- Improved StatCounter (kept, but hidden and accessible) -->
+        <div aria-hidden="true" style="display:none; margin-top:40px;">
+            <script type="text/javascript">
+                var sc_project=8363175;
+                var sc_invisible=0;
+                var sc_security="99b7ce7e";
+            </script>
+            <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script>
+        </div>
+
     </div>
 
     <script>
-        // Simple content loader - you can expand this later with more pages
-        function loadPage(page) {
-            alert("This would load the " + page + " content here.\n\nIn the full version, each menu item will smoothly replace the main content without reloading the page.");
-            // Example: window.location.href = page + ".html"; // or fetch content dynamically
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(sec => {
+                sec.style.display = 'none';
+            });
+            // Show the selected one
+            const active = document.getElementById(sectionId);
+            if (active) active.style.display = 'block';
         }
+
+        // Show About me by default
+        showSection('about');
     </script>
 </body>
 </html>
