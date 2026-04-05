@@ -10,10 +10,10 @@
             margin: 0;
             padding: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #a3a3c2;           /* your original body color */
+            background-color: #a3a3c2;
             line-height: 1.6;
         }
-        /* === Exact top navigation preserved === */
+        /* Exact top navigation preserved */
         .nav-bar {
             background-color: #a3a3c2;
             padding: 8px 0;
@@ -51,12 +51,11 @@
         .nav-table a:hover { color: black; }
         .nav-table a:active { color: black; }
 
-        /* Main content - matches your original table style */
         .main-content {
             max-width: 900px;
             margin: 25px auto;
             padding: 25px;
-            background: LightYellow;          /* your original inner table color */
+            background: LightYellow;
             border: 1px solid #ccc;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
@@ -73,13 +72,19 @@
         .skip-link:focus { top: 10px; }
         h1 { color: #330066; }
         img.photo { border: 3px solid #330066; margin: 10px; }
+        .statcounter-area {
+            margin-top: 40px;
+            text-align: center;
+            font-size: small;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
 
     <a href="#maincontent" class="skip-link">Skip to main content</a>
 
-    <!-- Your original-style top navigation -->
+    <!-- Top navigation - preserved exactly -->
     <div class="nav-bar">
         <table class="nav-table" cellpadding="0" cellspacing="0" width="80%">
             <tr>
@@ -122,16 +127,17 @@
             <p><strong>My research interests are in representation theory with applications in geometry, topology and mathematical physics.</strong></p>
         </div>
 
-        <!-- Other sections (placeholders for now) -->
+        <!-- Placeholders for other sections -->
         <div id="research" class="section" style="display:none;"><h1>Research</h1><p>Content coming soon...</p></div>
         <div id="cv" class="section" style="display:none;"><h1>Curriculum Vitae</h1><p>Content coming soon...</p></div>
-        <!-- Add the rest similarly -->
 
-        <!-- StatCounter - visible and with better alt text -->
-        <div style="margin-top:40px; text-align:center; font-size:small;">
+        <!-- StatCounter - now clearly visible -->
+        <div class="statcounter-area">
             <noscript>
                 <a href="https://statcounter.com/free-hit-counter/" title="Web Analytics" target="_blank">
-                    <img src="https://c.statcounter.com/8363175/0/99b7ce7e/0/" alt="Website visitor statistics">
+                    <img src="https://c.statcounter.com/8363175/0/99b7ce7e/0/" 
+                         alt="Website visitor counter" 
+                         style="border:0;">
                 </a>
             </noscript>
         </div>
