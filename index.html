@@ -10,10 +10,10 @@
             margin: 0;
             padding: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #a3a3c2;           /* your original body color */
             line-height: 1.6;
         }
-        /* === Your original top navigation - preserved exactly === */
+        /* === Exact top navigation preserved === */
         .nav-bar {
             background-color: #a3a3c2;
             padding: 8px 0;
@@ -51,12 +51,12 @@
         .nav-table a:hover { color: black; }
         .nav-table a:active { color: black; }
 
-        /* Main content */
+        /* Main content - matches your original table style */
         .main-content {
             max-width: 900px;
             margin: 25px auto;
             padding: 25px;
-            background: white;
+            background: LightYellow;          /* your original inner table color */
             border: 1px solid #ccc;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
@@ -71,16 +71,15 @@
             z-index: 200;
         }
         .skip-link:focus { top: 10px; }
-        h1, h2 { color: #330066; }
-        img.photo { border: 3px solid #330066; }
+        h1 { color: #330066; }
+        img.photo { border: 3px solid #330066; margin: 10px; }
     </style>
 </head>
 <body>
 
-    <!-- Accessibility skip link -->
     <a href="#maincontent" class="skip-link">Skip to main content</a>
 
-    <!-- Your preserved top navigation panel -->
+    <!-- Your original-style top navigation -->
     <div class="nav-bar">
         <table class="nav-table" cellpadding="0" cellspacing="0" width="80%">
             <tr>
@@ -97,10 +96,10 @@
         </table>
     </div>
 
-    <!-- Main content area -->
+    <!-- Main content -->
     <div class="main-content" id="maincontent">
 
-        <!-- About Me Section (your cleaned content) -->
+        <!-- About Me -->
         <div id="about" class="section">
             <h1>Anton M. Zeitlin</h1>
             <table width="100%" cellpadding="15" cellspacing="10">
@@ -123,40 +122,28 @@
             <p><strong>My research interests are in representation theory with applications in geometry, topology and mathematical physics.</strong></p>
         </div>
 
-        <!-- Placeholder for other sections (we'll fill them next) -->
-        <div id="research" class="section" style="display:none;">
-            <h1>Research</h1>
-            <p>Content for Research will go here.</p>
-        </div>
-        <div id="cv" class="section" style="display:none;">
-            <h1>Curriculum Vitae</h1>
-            <p>Content for CV will go here.</p>
-        </div>
-        <!-- Add more sections as needed -->
+        <!-- Other sections (placeholders for now) -->
+        <div id="research" class="section" style="display:none;"><h1>Research</h1><p>Content coming soon...</p></div>
+        <div id="cv" class="section" style="display:none;"><h1>Curriculum Vitae</h1><p>Content coming soon...</p></div>
+        <!-- Add the rest similarly -->
 
-        <!-- Improved StatCounter (kept, but hidden and accessible) -->
-        <div aria-hidden="true" style="display:none; margin-top:40px;">
-            <script type="text/javascript">
-                var sc_project=8363175;
-                var sc_invisible=0;
-                var sc_security="99b7ce7e";
-            </script>
-            <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js"></script>
+        <!-- StatCounter - visible and with better alt text -->
+        <div style="margin-top:40px; text-align:center; font-size:small;">
+            <noscript>
+                <a href="https://statcounter.com/free-hit-counter/" title="Web Analytics" target="_blank">
+                    <img src="https://c.statcounter.com/8363175/0/99b7ce7e/0/" alt="Website visitor statistics">
+                </a>
+            </noscript>
         </div>
 
     </div>
 
     <script>
         function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.section').forEach(sec => {
-                sec.style.display = 'none';
-            });
-            // Show the selected one
+            document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
             const active = document.getElementById(sectionId);
             if (active) active.style.display = 'block';
         }
-
         // Show About me by default
         showSection('about');
     </script>
