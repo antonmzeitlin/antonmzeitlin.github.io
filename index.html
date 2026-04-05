@@ -22,31 +22,27 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
       nav ul {
-    width: 95%;                  /* ← more room than the old 80% */
+    width: 80%;                  /* ← exactly your original width */
     margin: 0 auto;
     display: flex;
-    flex-wrap: nowrap;           /* stays on one line */
+    flex-wrap: wrap;             /* ← your original setting (allows graceful wrap only on tiny phones) */
     list-style: none;
     padding: 0;
     background-color: #330066;
-    justify-content: center;     /* centers the whole bar nicely */
 }
 
 nav li {
     flex: 1;
     text-align: center;
-    min-width: 105px;            /* ← smaller than before so everything fits */
-    max-width: 130px;
-    white-space: nowrap;         /* prevents words inside a button from breaking */
+    min-width: 130px;            /* ← exactly your original value that already fitted */
 }
 
 nav a {
     display: block;
-    padding: 8px 6px;            /* ← slightly tighter padding */
+    padding: 6px 4px;            /* ← exactly your original padding */
     color: #ffff00;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.95em;           /* ← tiny bit smaller text — makes the longest label ("Conferences organized") fit */
 }
         nav a:hover {
             background-color: LightYellow;
