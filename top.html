@@ -1,47 +1,65 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Navigation – Anton M. Zeitlin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation - Anton M. Zeitlin</title>
     <style>
         body {
             margin: 0;
-            padding: 10px 15px;
-            background: white;           /* plain white background */
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 13px;
-        }
-        ul {
-            list-style: none;
-            margin: 0;
             padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;                   /* spacing between links */
+            background-color: #a3a3c2;
+            font-family: Arial, Helvetica, sans-serif;
         }
-        li {
-            white-space: nowrap;
+        table {
+            width: 80%;
+            margin: 8px auto;
+            border-collapse: collapse;
         }
-        a {
-            text-decoration: none;
-            color: #0000cc;              /* classic dark blue link color */
+        td {
+            background-color: #330066;
+            color: red;
+            text-align: center;
+            padding: 6px 4px;
             font-weight: bold;
         }
+        td:hover {
+            background-color: LightYellow;
+            color: white;
+        }
+        a {
+            color: #ffff00;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            padding: 5px;
+            width: 100%;
+            height: 100%;
+        }
+        a:visited {
+            color: yellow;
+        }
         a:hover {
-            text-decoration: underline;
+            color: black;
+        }
+        a:active {
+            color: black;
         }
     </style>
 </head>
 <body>
-    <ul>
-        <li><a href="aboutme.html" target="main">About me</a></li>
-        <li><a href="research.html" target="main">Research</a></li>
-        <li><a href="publications.html" target="main">Publications</a></li>
-        <li><a href="teaching.html" target="main">Teaching</a></li>
-        <li><a href="cv.html" target="main">CV</a></li>
-        <li><a href="talks.html" target="main">Talks</a></li>
-        <li><a href="conf.html" target="main">Conferences</a></li>
-        <li><a href="miscellanea.html" target="main">Miscellanea</a></li>
-    </ul>
+    <table>
+        <tr>
+            <td><a href="aboutme.html" target="main">About me</a></td>
+            <td><a href="research.html" target="main">Research</a></td>
+            <td><a href="cv.html" target="main">CV</a></td>
+            <td><a href="publications.html" target="main">Publications</a></td>
+            <td><a href="talks.html" target="main">Talks</a></td>
+            <td><a href="seminars.html" target="main">MP Seminar</a></td>
+            <td><a href="conf.html" target="main">Conferences organized</a></td>
+            <td><a href="teaching.html" target="main">Teaching</a></td>
+            <td><a href="miscellanea.html" target="main">Miscellanea</a></td>
+        </tr>
+    </table>
 </body>
 </html>
