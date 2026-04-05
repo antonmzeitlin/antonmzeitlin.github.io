@@ -13,29 +13,35 @@
             background-color: #a3a3c2;
             line-height: 1.6;
         }
-   .nav-bar {
-    background-color: #a3a3c2;
+  .nav-bar {
+    background-color: #330066;
     padding: 8px 0;
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    max-width: none;           /* ← removes the 980px limit */
+    width: 100%;               /* ← makes the blue bar full width of the page */
 }
 
 nav ul {
-    width: 80%;
+    width: 100%;
+    max-width: 1250px;         /* ← wide enough for all 9 full labels */
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;         /* ← forces one single line */
     list-style: none;
-    padding: 0;
+    padding: 0 20px;
     background-color: #330066;
+    justify-content: space-around;   /* even spacing, no cramping */
+    box-sizing: border-box;
 }
 
 nav li {
     flex: 1;
     text-align: center;
-    min-width: 130px;
+    min-width: 130px;          /* your original size */
+    white-space: nowrap;
 }
 
 nav a {
