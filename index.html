@@ -14,37 +14,33 @@
             line-height: 1.6;
         }
    .nav-bar {
-    background-color: #330066;
+    background-color: #a3a3c2;
     padding: 8px 0;
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    max-width: 980px;          /* ← matches the main content panel */
-    margin: 0 auto;            /* ← centers the blue bar perfectly */
 }
 
 nav ul {
-    width: 100%;               /* fills the centered blue bar */
-    margin: 0;
+    width: 80%;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;           /* your original setting that already worked */
+    flex-wrap: wrap;
     list-style: none;
-    padding: 0 10px;           /* small side padding so nothing sticks out */
+    padding: 0;
     background-color: #330066;
-    justify-content: center;
 }
 
 nav li {
     flex: 1;
     text-align: center;
-    min-width: 130px;          /* your original value */
-    white-space: nowrap;
+    min-width: 130px;
 }
 
 nav a {
     display: block;
-    padding: 6px 4px;          /* your original padding */
+    padding: 6px 4px;
     color: #ffff00;
     text-decoration: none;
     font-weight: bold;
