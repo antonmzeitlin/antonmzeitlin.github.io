@@ -77,8 +77,10 @@
         }
         a:focus, nav a:focus { outline: 4px solid #ffff00; outline-offset: 3px; }
     </style>
-    <!-- Modern accessible MathJax v3 -->
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script>
 </head>
 <body>
 
