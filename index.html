@@ -14,50 +14,51 @@
         line-height: 1.6;
     }
 
-    .nav-bar {
-        background-color: #330066;
-        padding: 8px 0;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        width: 100%;
-        max-width: none;
-        margin: 0;
-    }
-        nav ul {
-            width: 80%;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-            padding: 0;
-            background-color: #330066;
-            gap: 4px;                    /* nice small spacing between items */
-        }
+ .nav-bar {
+    background-color: #330066;
+    padding: 8px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 100%;
+}
 
-        nav li {
-            flex: 1;
-            text-align: center;
-            min-width: 158px;            /* gives longer items room */
-        }
+nav ul {
+    width: 90%;                  /* slightly wider on narrow screens */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;             /* keep wrapping on very narrow screens */
+    justify-content: center;     /* better centering when wrapped */
+    list-style: none;
+    padding: 0;
+    gap: 6px;                    /* increased gap for breathing room */
+}
 
-        nav a {
-            display: block;
-            padding: 12px 18px;          /* ← this is the main fix */
-            color: #ffff00;
-            text-decoration: none;
-            font-weight: bold;
-            box-sizing: border-box;
-            transition: background-color 0.25s ease, border-radius 0.25s ease;
-            white-space: nowrap;         /* prevents text from wrapping inside the link */
-        }
+nav li {
+    /* removed flex: 1 so items keep natural width */
+    text-align: center;
+}
 
-        nav a:hover {
-            background-color: #ffff99;   /* slightly softer yellow */
-            color: black;
-            border-radius: 6px;          /* makes the yellow box look polished */
-        }
+nav a {
+    display: block;
+    padding: 12px 20px;          /* more horizontal padding */
+    color: #ffff00;
+    text-decoration: none;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: background-color 0.25s ease, border-radius 0.25s ease;
+    white-space: nowrap;         /* prevent text breaking inside link */
+    min-width: 140px;            /* helps longer items on wrap */
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #ffff99;
+    color: black;
+    border-radius: 8px;          /* slightly rounder, looks polished */
+}
 
     .main-content {
         max-width: 980px;
