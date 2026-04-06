@@ -928,21 +928,32 @@ n. 2, pp. 203-214, 2005<br>
     </div>
 
     <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.section').forEach(s => {
-                s.style.display = 'none';
-                s.setAttribute('aria-hidden', 'true');
-            });
-            const active = document.getElementById(sectionId);
-            if (active) {
-                active.style.display = 'block';
-                active.setAttribute('aria-hidden', 'false');
-                const heading = active.querySelector('h1, h2');
-                if (heading) heading.focus();
-            }
+    function showSection(sectionId) {
+        // Hide all sections
+        document.querySelectorAll('.section').forEach(s => {
+            s.style.display = 'none';
+            s.setAttribute('aria-hidden', 'true');
+        });
+
+        // Show the selected section
+        const active = document.getElementById(sectionId);
+        if (active) {
+            active.style.display = 'block';
+            active.setAttribute('aria-hidden', 'false');
+            
+            // Force reflow to fix width/overlap issues
+            active.style.width = '100%';
+            void active.offsetWidth;   // trigger reflow
+            
+            // Focus the first heading for accessibility
+            const heading = active.querySelector('h1, h2');
+            if (heading) heading.focus();
         }
-        window.addEventListener('load', () => showSection('about'));
-    </script>
+    }
+
+    // Load "About me" on page load
+    window.addEventListener('load', () => showSection('about'));
+</script>
 
 </body>
 </html>
