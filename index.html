@@ -31,18 +31,18 @@ nav {
     position: relative;
 }
 
-/* Hamburger button - hidden on wide screens */
+/* Hamburger - hidden on desktop */
 .hamburger {
     display: none;
     background: none;
     border: none;
     color: #ffff00;
     font-size: 28px;
+    padding: 8px 12px;
     cursor: pointer;
-    padding: 8px;
 }
 
-/* Desktop menu - single line */
+/* Desktop menu - single horizontal line */
 .menu {
     display: flex;
     flex-wrap: nowrap;
@@ -57,12 +57,11 @@ nav {
 
 nav a {
     display: block;
-    padding: 12px 24px;
+    padding: 12px 24px;        /* good space for hover */
     color: #ffff00;
     text-decoration: none;
     font-weight: bold;
     box-sizing: border-box;
-    transition: background-color 0.25s ease, border-radius 0.25s ease;
     white-space: nowrap;
     min-width: 115px;
 }
@@ -74,26 +73,26 @@ nav a:focus {
     border-radius: 8px;
 }
 
-/* Mobile styles */
+/* Mobile: show hamburger and vertical menu */
 @media (max-width: 900px) {
     .hamburger {
         display: block;
     }
     
     .menu {
-        display: none;                    /* hidden by default on mobile */
+        display: none;
         flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
         background-color: #330066;
-        padding: 10px 0;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        padding: 12px 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
     
     .menu.show {
-        display: flex;                    /* show when hamburger clicked */
+        display: flex;
     }
     
     nav a {
@@ -1012,14 +1011,16 @@ n. 2, pp. 203-214, 2005<br>
         }
     }
     window.addEventListener('load', () => showSection('about'));
-       // Hamburger menu toggle
+     // Hamburger menu
 const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu');
 
-hamburger.addEventListener('click', () => {
-    const isOpen = menu.classList.toggle('show');
-    hamburger.setAttribute('aria-expanded', isOpen);
-});
+if (hamburger && menu) {
+    hamburger.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('show');
+        hamburger.setAttribute('aria-expanded', isOpen);
+    });
+}
 </script>
 
 </body>
