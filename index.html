@@ -68,14 +68,19 @@
     }
 
     .section {
-        background: LightYellow;
-        padding: 25px;             /* slightly more padding */
-        margin-bottom: 30px;
-        width: 100%;
-        box-sizing: border-box;
-        max-width: 100%;
-        overflow: auto;            /* changed from hidden to auto for long content */
-    }
+    background: LightYellow;
+    padding: 30px;             /* more padding for comfort */
+    margin-bottom: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: auto;
+    min-height: 400px;         /* prevents sudden height jumps when switching tabs */
+}
+        .section table {
+    width: 100%;
+    table-layout: fixed;       /* helps prevent extreme widening */
+}
 
     .skip-link {
         position: absolute;
