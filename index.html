@@ -74,9 +74,10 @@
     width: 100%;
     box-sizing: border-box;
     max-width: 100%;
-    overflow-x: auto;           /* allows horizontal scroll only if truly needed */
+    overflow-x: auto;
     overflow-y: visible;
-    min-height: 600px;
+    min-height: 650px;           /* increased to reduce sudden jumps */
+    position: relative;          /* helps with layout stability */
 }
     .section table {
     width: 100%;
@@ -943,19 +944,25 @@ n. 2, pp. 203-214, 2005<br>
 
    <script>
     function showSection(sectionId) {
+        // Hide all sections
         document.querySelectorAll('.section').forEach(s => {
             s.style.display = 'none';
             s.setAttribute('aria-hidden', 'true');
         });
 
+        // Show the selected section
         const active = document.getElementById(sectionId);
         if (active) {
             active.style.display = 'block';
             active.setAttribute('aria-hidden', 'false');
             
-            // Force clean reflow to prevent overlap/narrow box issues
+            // Strong reflow to fix broken letters / overlap
             active.style.width = '100%';
-            void active.offsetWidth;
+            void active.offsetWidth;   // force browser to recalculate layout
+            void active.offsetHeight;
+            
+            // Scroll to top of the section smoothly
+            active.scrollIntoView({ behavior: "instant", block: "start" });
             
             const heading = active.querySelector('h1, h2');
             if (heading) heading.focus();
