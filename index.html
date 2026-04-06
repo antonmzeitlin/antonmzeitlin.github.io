@@ -20,28 +20,28 @@
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    width: 100%;               /* stretches full screen width */
-    max-width: none;
-    margin: 0;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
 }
 
 nav ul {
     width: 100%;
-    max-width: 1480px;         /* extra wide enough for all 9 full labels */
+    max-width: 1550px;         /* extra wide for all 9 full labels */
     margin: 0 auto;
     display: flex;
-    flex-wrap: nowrap;         /* forces ONE single line */
+    flex-wrap: nowrap;         /* forces one single line */
     list-style: none;
-    padding: 0 40px;           /* side padding prevents sticking out */
+    padding: 0 50px;           /* extra side padding so nothing sticks out */
     background-color: #330066;
-    justify-content: space-around;   /* even spacing — stops cramping between Teaching and Conferences organized */
+    justify-content: space-around;   /* even spacing, stops cramping */
     box-sizing: border-box;
 }
 
 nav li {
     flex: 1;
     text-align: center;
-    min-width: 118px;
+    min-width: 115px;
     white-space: nowrap;
 }
 
