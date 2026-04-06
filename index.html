@@ -74,17 +74,21 @@
     width: 100%;
     box-sizing: border-box;
     max-width: 100%;
-    overflow-x: auto;
+    overflow-x: auto;           /* allows horizontal scroll only if truly needed */
     overflow-y: visible;
-    min-height: 600px;          /* increased a bit more */
+    min-height: 600px;
 }
     .section table {
-    width: 100% !important;
-    table-layout: fixed !important;
-    word-break: break-word;
-    max-width: 100%;
+    width: 100%;
+    table-layout: auto;        /* let the browser size columns naturally */
+    word-break: normal;
+    white-space: normal;
 }
-
+.section td, .section th {
+    padding: 8px 12px;
+    vertical-align: top;
+    line-height: 1.5;
+}
     .skip-link {
         position: absolute;
         top: -40px;
