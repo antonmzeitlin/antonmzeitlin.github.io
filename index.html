@@ -109,7 +109,7 @@ nav a:focus {
         background: #a3a3c2;
     }
 
-    .section {
+   .section {
     background: LightYellow;
     padding: 30px;
     margin-bottom: 30px;
@@ -118,8 +118,18 @@ nav a:focus {
     max-width: 100%;
     overflow-x: auto;
     overflow-y: visible;
-    min-height: 650px;           /* increased to reduce sudden jumps */
-    position: relative;          /* helps with layout stability */
+    min-height: 650px;
+    position: relative;
+    scroll-margin-top: 80px;     /* increased a bit for safety */
+}
+
+/* Fix for internal named anchors */
+a[name],
+a[id] {
+    scroll-margin-top: 90px;
+    scroll-padding-top: 90px;
+    display: inline-block;       /* helps some browsers */
+}
 scroll-margin-top: 65px;}
     .section table {
     width: 100%;
