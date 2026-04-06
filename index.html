@@ -16,7 +16,7 @@
 
 .nav-bar {
     background-color: #330066;
-    padding: 12px 0;             /* slightly more vertical space */
+    padding: 12px 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -26,38 +26,32 @@
 
 nav ul {
     width: 95%;
-    max-width: 1320px;           /* wider container → fits more items before scrolling */
+    max-width: 1350px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: nowrap;           /* keeps it in one line as long as possible */
+    flex-wrap: nowrap;
     justify-content: center;
     list-style: none;
-    padding: 0 20px;
-    gap: 8px;
+    padding: 0 25px;
+    gap: 10px;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;       /* hides scrollbar */
+    scrollbar-width: none;
 }
 
 nav ul::-webkit-scrollbar {
-    display: none;               /* hides scrollbar on Chrome/Edge/Safari */
-}
-
-nav li {
-    flex: 0 0 auto;
-    text-align: center;
+    display: none;
 }
 
 nav a {
     display: block;
-    padding: 12px 24px;          /* ← increased horizontal padding for better hover room */
+    padding: 12px 26px;          /* more room for hover */
     color: #ffff00;
     text-decoration: none;
     font-weight: bold;
     box-sizing: border-box;
     transition: background-color 0.25s ease, border-radius 0.25s ease;
     white-space: nowrap;
-    min-width: 118px;            /* balanced – helps long items without forcing early wrap */
+    min-width: 115px;
 }
 
 nav a:hover,
