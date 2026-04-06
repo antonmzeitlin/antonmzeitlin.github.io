@@ -25,41 +25,43 @@
 }
 
 nav ul {
-    width: 90%;                  /* slightly wider on narrow screens */
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1200px;           /* prevents it from stretching too wide on large screens */
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;             /* keep wrapping on very narrow screens */
-    justify-content: center;     /* better centering when wrapped */
+    flex-wrap: nowrap;           /* ← this keeps everything in ONE line */
+    overflow-x: auto;            /* ← enables horizontal scrolling when needed */
+    overflow-y: hidden;
     list-style: none;
-    padding: 0;
-    gap: 6px;                    /* increased gap for breathing room */
+    padding: 0 10px;             /* small padding so first/last items aren't cut off */
+    gap: 8px;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
+    scrollbar-width: thin;       /* nicer scrollbar on desktop (optional) */
 }
 
 nav li {
-    /* removed flex: 1 so items keep natural width */
+    flex: 0 0 auto;              /* items keep their natural width, no shrinking */
     text-align: center;
+    white-space: nowrap;
 }
 
 nav a {
     display: block;
-    padding: 12px 20px;          /* more horizontal padding */
+    padding: 12px 20px;          /* good breathing room for hover box */
     color: #ffff00;
     text-decoration: none;
     font-weight: bold;
     box-sizing: border-box;
     transition: background-color 0.25s ease, border-radius 0.25s ease;
-    white-space: nowrap;         /* prevent text breaking inside link */
-    min-width: 140px;            /* helps longer items on wrap */
+    min-width: 130px;            /* helps longer items like "Conferences Organized" */
 }
 
 nav a:hover,
 nav a:focus {
     background-color: #ffff99;
     color: black;
-    border-radius: 8px;          /* slightly rounder, looks polished */
+    border-radius: 8px;
 }
-
     .main-content {
         max-width: 980px;
         margin: 25px auto;
