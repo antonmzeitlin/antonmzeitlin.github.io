@@ -67,11 +67,14 @@
     }
 
     .section {
-        background: LightYellow;
-        padding: 20px;
-        margin-bottom: 30px;
-    }
-
+    background: LightYellow;
+    padding: 20px;
+    margin-bottom: 30px;
+    width: 100%;           /* fill the container properly */
+    box-sizing: border-box;
+    max-width: 100%;       /* prevent overflowing the parent */
+    overflow: hidden;      /* stop content from spilling when switching tabs */
+}
     .skip-link {
         position: absolute;
         top: -40px;
