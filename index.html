@@ -164,6 +164,35 @@ scroll-margin-top: 65px;}
 .talks-table td:hover {
     background-color: #f0f0f0;
 }
+
+.seminar-table {
+    width: 90%;
+    max-width: 980px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: LightYellow;
+}
+
+.seminar-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ccc;
+    vertical-align: top;
+    line-height: 1.6;
+}
+
+.seminar-table tr:last-child td {
+    border-bottom: none;
+}
+
+.seminar-table td:hover {
+    background-color: #f5f5f5;
+}
+
+.seminar-table h3 {
+    margin-top: 0;
+    color: #330066;
+}
+        
     .skip-link {
         position: absolute;
         top: -40px;
@@ -207,7 +236,7 @@ scroll-margin-top: 65px;}
             <li><a href="#" onclick="showSection('cv'); return false;">CV</a></li>
             <li><a href="#" onclick="showSection('publications'); return false;">Publications</a></li>
             <li><a href="#" onclick="showSection('talks'); return false;">Talks</a></li>
-            <li><a href="#" onclick="showSection('seminars'); return false;">MP Seminar</a></li>
+            <li><a href="#" onclick="showSection('seminars'); return false;">RTMP Seminar</a></li>
             <li><a href="#" onclick="showSection('conf'); return false;">Conferences Organized</a></li>
             <li><a href="#" onclick="showSection('teaching'); return false;">Teaching</a></li>
             <li><a href="#" onclick="showSection('miscellanea'); return false;">Miscellanea</a></li>
@@ -1792,10 +1821,31 @@ Int.Conf.
 </div>
 
         <!-- ==================== MP SEMINAR (was missing) ==================== -->
-        <div id="seminars" class="section" >
-            <h2>MP Seminar</h2>
-            <p><em>Content for MP Seminar section — paste your original seminar information here</em></p>
-        </div>
+        <div id="seminars" class="section">
+    <h2>MP Seminar</h2>
+    
+    <table class="seminar-table" align="center" width="90%" cellpadding="15" cellspacing="0">
+        
+        <tr>
+            <td>
+                <h3>LSU Seminar (2021–2024)</h3>
+                <p><strong><a href="https://www.math.lsu.edu/calendar?selecttime=all&selectevent=Mathematical+Physics+and+Representation+Theory+Seminar" target="_blank">Mathematical Physics and Representation Theory Seminar</a></strong></p>
+                <p>Organized by:<br>
+                <strong><a href="https://www.math.lsu.edu/~sbaldrid/" target="_blank">Scott Baldridge</a></strong> and <strong>Anton M. Zeitlin</strong></p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <h3>Georgia Tech Seminar (2026–present)</h3>
+                <p><strong><a href="https://math.gatech.edu/seminars-and-colloquia-by-series?series_tid=119" target="_blank">Representation Theory, Moduli, and Physics Seminar</a></strong></p>
+                <p>Organized by:<br>
+                <strong>Harold Blum</strong> and <strong>Anton M. Zeitlin</strong></p>
+            </td>
+        </tr>
+        
+    </table>
+</div>
 
         <!-- ==================== CONFERENCES ORGANIZED (was missing) ==================== -->
         <div id="conf" class="section">
