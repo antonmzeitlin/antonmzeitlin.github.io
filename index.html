@@ -25,35 +25,32 @@
 }
 
 nav ul {
-    width: 100%;
-    max-width: 1200px;           /* prevents it from stretching too wide on large screens */
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: nowrap;           /* ← this keeps everything in ONE line */
-    overflow-x: auto;            /* ← enables horizontal scrolling when needed */
-    overflow-y: hidden;
+    flex-wrap: wrap;           /* allows wrapping only when truly needed */
+    justify-content: center;   /* centers the items nicely */
     list-style: none;
-    padding: 0 10px;             /* small padding so first/last items aren't cut off */
-    gap: 8px;
-    -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
-    scrollbar-width: thin;       /* nicer scrollbar on desktop (optional) */
+    padding: 0;
+    gap: 8px;                  /* good spacing between items */
 }
 
 nav li {
-    flex: 0 0 auto;              /* items keep their natural width, no shrinking */
+    flex: 0 1 auto;            /* items grow a bit but keep natural width */
     text-align: center;
-    white-space: nowrap;
+    min-width: 130px;          /* prevents items from becoming too narrow */
 }
 
 nav a {
     display: block;
-    padding: 12px 20px;          /* good breathing room for hover box */
+    padding: 12px 22px;        /* increased padding → no more cramped "d" on hover */
     color: #ffff00;
     text-decoration: none;
     font-weight: bold;
     box-sizing: border-box;
     transition: background-color 0.25s ease, border-radius 0.25s ease;
-    min-width: 130px;            /* helps longer items like "Conferences Organized" */
+    white-space: nowrap;
 }
 
 nav a:hover,
