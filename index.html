@@ -24,27 +24,40 @@
     width: 100%;
 }
 
-nav ul {
-    width: 95%;
-    max-width: 1350px;
-    margin: 0 auto;
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Hamburger button - hidden on wide screens */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffff00;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+/* Desktop menu - single line */
+.menu {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     list-style: none;
-    padding: 0 25px;
-    gap: 10px;
-    overflow-x: auto;
-    scrollbar-width: none;
-}
-
-nav ul::-webkit-scrollbar {
-    display: none;
+    padding: 0;
+    margin: 0;
+    gap: 8px;
+    width: 95%;
+    max-width: 1350px;
 }
 
 nav a {
     display: block;
-    padding: 12px 26px;          /* more room for hover */
+    padding: 12px 24px;
     color: #ffff00;
     text-decoration: none;
     font-weight: bold;
@@ -59,6 +72,36 @@ nav a:focus {
     background-color: #ffff99;
     color: black;
     border-radius: 8px;
+}
+
+/* Mobile styles */
+@media (max-width: 900px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .menu {
+        display: none;                    /* hidden by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #330066;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    
+    .menu.show {
+        display: flex;                    /* show when hamburger clicked */
+    }
+    
+    nav a {
+        padding: 14px 20px;
+        text-align: center;
+        min-width: auto;
+        width: 100%;
+    }
 }
     .main-content {
         max-width: 980px;
@@ -124,6 +167,9 @@ scroll-margin-top: 65px;}
     
     <div class="nav-bar">
     <nav aria-label="Main navigation">
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+            ☰
+        </button>
         <ul>
             <li><a href="#" onclick="showSection('about'); return false;">About me</a></li>
             <li><a href="#" onclick="showSection('research'); return false;">Research</a></li>
@@ -966,6 +1012,14 @@ n. 2, pp. 203-214, 2005<br>
         }
     }
     window.addEventListener('load', () => showSection('about'));
+       // Hamburger menu toggle
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
+
+hamburger.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('show');
+    hamburger.setAttribute('aria-expanded', isOpen);
+});
 </script>
 
 </body>
