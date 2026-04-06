@@ -6,87 +6,95 @@
     <meta name="description" content="Anton M. Zeitlin - Associate Professor, School of Mathematics, Georgia Institute of Technology">
     <title>Anton M. Zeitlin | School of Mathematics | Georgia Institute of Technology</title>
     <style>
-        .nav-bar {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    background-color: #330066 !important;
-}
-       body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #a3a3c2;
-            line-height: 1.6;
-        }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #a3a3c2;
+        line-height: 1.6;
+    }
 
-nav ul {
-    width: 100% !important;
-    max-width: 1600px !important;
-    margin: 0 auto !important;
-    display: flex;
-    flex-wrap: nowrap;
-    list-style: none;
-    padding: 0 40px;
-    background-color: #330066;
-    justify-content: space-around;
-    box-sizing: border-box;
-}
+    .nav-bar {
+        background-color: #330066;
+        padding: 8px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
 
-nav li {
-    flex: 1;
-    text-align: center;
-    min-width: 115px;
-    white-space: nowrap;
-}
+    nav ul {
+        width: 100%;
+        max-width: 1550px;         /* wide enough for all 9 full labels */
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: nowrap;         /* forces one single line */
+        list-style: none;
+        padding: 0 40px;
+        background-color: #330066;
+        justify-content: space-around;   /* even spacing, no cramping */
+        box-sizing: border-box;
+    }
 
-nav a {
-    display: block;
-    padding: 6px 4px;
-    color: #ffff00;
-    text-decoration: none;
-    font-weight: bold;
-}
-        nav a:hover {
-            background-color: LightYellow;
-            color: black;
-        }
-        .main-content {
-            max-width: 980px;
-            margin: 25px auto;
-            padding: 30px;
-            background: #a3a3c2;
-        }
-        .section {
-            background: LightYellow;
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-        .nav-bar {
-    max-width: none !important;
-    width: 100% !important;
-    margin: 0 !important;
-}
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 10px;
-            background: #330066;
-            color: white;
-            padding: 8px 12px;
-            text-decoration: none;
-            z-index: 200;
-        }
-        .skip-link:focus { top: 10px; }
-        h1, h2 { color: #330066; }
-        img.photo { border: 3px solid #330066; margin: 10px; }
-        .statcounter-area {
-            margin-top: 50px;
-            text-align: center;
-            padding: 15px;
-        }
-        a:focus, nav a:focus { outline: 4px solid #ffff00; outline-offset: 3px; }
-    </style>
+    nav li {
+        flex: 1;
+        text-align: center;
+        min-width: 118px;
+        white-space: nowrap;
+    }
+
+    nav a {
+        display: block;
+        padding: 6px 4px;
+        color: #ffff00;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        background-color: LightYellow;
+        color: black;
+    }
+
+    .main-content {
+        max-width: 980px;
+        margin: 25px auto;
+        padding: 30px;
+        background: #a3a3c2;
+    }
+
+    .section {
+        background: LightYellow;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 10px;
+        background: #330066;
+        color: white;
+        padding: 8px 12px;
+        text-decoration: none;
+        z-index: 200;
+    }
+    .skip-link:focus { top: 10px; }
+
+    h1, h2 { color: #330066; }
+    img.photo { border: 3px solid #330066; margin: 10px; }
+
+    .statcounter-area {
+        margin-top: 50px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    a:focus, nav a:focus { outline: 4px solid #ffff00; outline-offset: 3px; }
+</style>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
     </script>
