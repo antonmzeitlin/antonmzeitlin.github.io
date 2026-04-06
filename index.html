@@ -25,40 +25,39 @@
         max-width: none;
         margin: 0;
     }
+        nav ul {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            background-color: #330066;
+            gap: 4px;                    /* nice small spacing between items */
+        }
 
-    nav ul {
-        width: 100%;
-        max-width: 1600px;         /* even wider — should comfortably fit all 9 labels */
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: nowrap;
-        list-style: none;
-        padding: 0 50px;           /* more side padding */
-        background-color: #330066;
-        justify-content: space-around;
-        box-sizing: border-box;
-    }
+        nav li {
+            flex: 1;
+            text-align: center;
+            min-width: 158px;            /* gives longer items room */
+        }
 
-    nav li {
-        flex: 1;
-        text-align: center;
-        min-width: 115px;
-        white-space: nowrap;
-    }
+        nav a {
+            display: block;
+            padding: 12px 18px;          /* ← this is the main fix */
+            color: #ffff00;
+            text-decoration: none;
+            font-weight: bold;
+            box-sizing: border-box;
+            transition: background-color 0.25s ease, border-radius 0.25s ease;
+            white-space: nowrap;         /* prevents text from wrapping inside the link */
+        }
 
-    nav a {
-        display: block;
-        padding: 8px 6px;          /* slightly more comfortable padding */
-        color: #ffff00;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 0.93em;
-    }
-
-    nav a:hover {
-        background-color: LightYellow;
-        color: black;
-    }
+        nav a:hover {
+            background-color: #ffff99;   /* slightly softer yellow */
+            color: black;
+            border-radius: 6px;          /* makes the yellow box look polished */
+        }
 
     .main-content {
         max-width: 980px;
