@@ -28,30 +28,31 @@
 
     nav ul {
         width: 100%;
-        max-width: 1550px;         /* wide enough for all 9 full labels */
+        max-width: 1600px;         /* even wider — should comfortably fit all 9 labels */
         margin: 0 auto;
         display: flex;
-        flex-wrap: nowrap;         /* forces one single line */
+        flex-wrap: nowrap;
         list-style: none;
-        padding: 0 40px;
+        padding: 0 50px;           /* more side padding */
         background-color: #330066;
-        justify-content: space-around;   /* even spacing, no cramping */
+        justify-content: space-around;
         box-sizing: border-box;
     }
 
     nav li {
         flex: 1;
         text-align: center;
-        min-width: 118px;
+        min-width: 115px;
         white-space: nowrap;
     }
 
     nav a {
         display: block;
-        padding: 6px 4px;
+        padding: 8px 6px;          /* slightly more comfortable padding */
         color: #ffff00;
         text-decoration: none;
         font-weight: bold;
+        font-size: 0.93em;
     }
 
     nav a:hover {
@@ -67,14 +68,15 @@
     }
 
     .section {
-    background: LightYellow;
-    padding: 20px;
-    margin-bottom: 30px;
-    width: 100%;           /* fill the container properly */
-    box-sizing: border-box;
-    max-width: 100%;       /* prevent overflowing the parent */
-    overflow: hidden;      /* stop content from spilling when switching tabs */
-}
+        background: LightYellow;
+        padding: 25px;             /* slightly more padding */
+        margin-bottom: 30px;
+        width: 100%;
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow: auto;            /* changed from hidden to auto for long content */
+    }
+
     .skip-link {
         position: absolute;
         top: -40px;
@@ -927,31 +929,26 @@ n. 2, pp. 203-214, 2005<br>
         </a>
     </div>
 
-    <script>
+   <script>
     function showSection(sectionId) {
-        // Hide all sections
         document.querySelectorAll('.section').forEach(s => {
             s.style.display = 'none';
             s.setAttribute('aria-hidden', 'true');
         });
 
-        // Show the selected section
         const active = document.getElementById(sectionId);
         if (active) {
             active.style.display = 'block';
             active.setAttribute('aria-hidden', 'false');
             
-            // Force reflow to fix width/overlap issues
+            // Force clean reflow to prevent overlap/narrow box issues
             active.style.width = '100%';
-            void active.offsetWidth;   // trigger reflow
+            void active.offsetWidth;
             
-            // Focus the first heading for accessibility
             const heading = active.querySelector('h1, h2');
             if (heading) heading.focus();
         }
     }
-
-    // Load "About me" on page load
     window.addEventListener('load', () => showSection('about'));
 </script>
 
