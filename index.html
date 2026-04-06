@@ -57,7 +57,7 @@ nav {
 
 nav a {
     display: block;
-    padding: 12px 24px;        /* good space for hover */
+    padding: 12px 24px;
     color: #ffff00;
     text-decoration: none;
     font-weight: bold;
@@ -73,15 +73,14 @@ nav a:focus {
     border-radius: 8px;
 }
 
-/* Mobile: show hamburger and vertical menu */
+/* =============== MOBILE STYLES =============== */
 @media (max-width: 900px) {
-   .menu {
-        display: flex !important;
-    }
+    .hamburger {
+        display: block;
     }
     
     .menu {
-        display: none;
+        display: none;                    /* hidden by default on mobile */
         flex-direction: column;
         position: absolute;
         top: 100%;
